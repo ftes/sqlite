@@ -16,6 +16,9 @@
     <Filter Include="Makefiles">
       <UniqueIdentifier>{b0278668-d928-4726-8a03-d443b6b894d9}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Generated Files">
+      <UniqueIdentifier>{dde8eb08-2268-466f-bd1d-848854804ec4}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="fts5.c">
@@ -262,9 +265,6 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="mptest\mptest.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="src\alter.c">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="src\analyze.c">
@@ -582,12 +582,6 @@
     <ClCompile Include="src\vacuum.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\vdbe.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="src\vdbeapi.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="src\vdbeaux.c">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -732,324 +726,6 @@
     <ClCompile Include="tool\varint.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="tsrc\alter.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="tsrc\analyze.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="tsrc\attach.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="tsrc\auth.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="tsrc\backup.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="tsrc\bitvec.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="tsrc\btmutex.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="tsrc\btree.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="tsrc\build.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="tsrc\callback.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="tsrc\complete.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="tsrc\ctime.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="tsrc\date.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="tsrc\dbstat.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="tsrc\delete.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="tsrc\expr.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="tsrc\fault.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="tsrc\fkey.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="tsrc\fts1.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="tsrc\fts1_hash.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="tsrc\fts1_porter.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="tsrc\fts1_tokenizer1.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="tsrc\fts2.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="tsrc\fts2_hash.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="tsrc\fts2_icu.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="tsrc\fts2_porter.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="tsrc\fts2_tokenizer.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="tsrc\fts2_tokenizer1.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="tsrc\fts3.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="tsrc\fts3_aux.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="tsrc\fts3_expr.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="tsrc\fts3_hash.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="tsrc\fts3_icu.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="tsrc\fts3_porter.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="tsrc\fts3_snippet.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="tsrc\fts3_tokenizer.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="tsrc\fts3_tokenizer1.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="tsrc\fts3_tokenize_vtab.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="tsrc\fts3_unicode.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="tsrc\fts3_unicode2.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="tsrc\fts3_write.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="tsrc\fts5.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="tsrc\func.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="tsrc\global.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="tsrc\hash.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="tsrc\icu.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="tsrc\insert.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="tsrc\json1.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="tsrc\legacy.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="tsrc\loadext.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="tsrc\main.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="tsrc\malloc.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="tsrc\mem0.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="tsrc\mem1.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="tsrc\mem2.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="tsrc\mem3.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="tsrc\mem5.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="tsrc\memjournal.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="tsrc\mutex.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="tsrc\mutex_noop.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="tsrc\mutex_unix.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="tsrc\mutex_w32.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="tsrc\notify.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="tsrc\opcodes.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="tsrc\os.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="tsrc\os_unix.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="tsrc\os_win.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="tsrc\pager.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="tsrc\parse.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="tsrc\pcache.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="tsrc\pcache1.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="tsrc\pragma.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="tsrc\prepare.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="tsrc\printf.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="tsrc\random.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="tsrc\resolve.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="tsrc\rowset.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="tsrc\rtree.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="tsrc\select.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="tsrc\shell.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="tsrc\sqlite3rbu.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="tsrc\sqlite3session.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="tsrc\status.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="tsrc\table.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="tsrc\tclsqlite.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="tsrc\threads.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="tsrc\tokenize.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="tsrc\treeview.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="tsrc\trigger.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="tsrc\update.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="tsrc\utf.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="tsrc\util.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="tsrc\vacuum.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="tsrc\vdbe.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="tsrc\vdbeapi.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="tsrc\vdbeaux.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="tsrc\vdbeblob.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="tsrc\vdbemem.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="tsrc\vdbesort.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="tsrc\vdbetrace.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="tsrc\vtab.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="tsrc\wal.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="tsrc\walker.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="tsrc\where.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="tsrc\wherecode.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="tsrc\whereexpr.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="vsixtest\App.xaml.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -1058,6 +734,12 @@
     </ClCompile>
     <ClCompile Include="vsixtest\pch.cpp">
       <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\alter.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="vm_enclave_u.c">
+      <Filter>Generated Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -1211,12 +893,6 @@
     <ClInclude Include="src\test_windirent.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\vdbe.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="src\vdbeInt.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="src\vxworks.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -1224,126 +900,6 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="src\whereInt.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="tsrc\btree.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="tsrc\btreeInt.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="tsrc\fts1.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="tsrc\fts1_hash.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="tsrc\fts1_tokenizer.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="tsrc\fts2.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="tsrc\fts2_hash.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="tsrc\fts2_tokenizer.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="tsrc\fts3.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="tsrc\fts3Int.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="tsrc\fts3_hash.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="tsrc\fts3_tokenizer.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="tsrc\fts5.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="tsrc\hash.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="tsrc\hwtime.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="tsrc\keywordhash.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="tsrc\msvc.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="tsrc\mutex.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="tsrc\opcodes.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="tsrc\os.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="tsrc\os_common.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="tsrc\os_setup.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="tsrc\os_win.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="tsrc\pager.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="tsrc\parse.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="tsrc\pcache.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="tsrc\pragma.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="tsrc\rtree.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="tsrc\sqlite3.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="tsrc\sqlite3ext.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="tsrc\sqlite3rbu.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="tsrc\sqlite3session.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="tsrc\sqliteicu.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="tsrc\sqliteInt.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="tsrc\sqliteLimit.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="tsrc\vdbe.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="tsrc\vdbeInt.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="tsrc\vxworks.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="tsrc\wal.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="tsrc\whereInt.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="vsixtest\App.xaml.h">
@@ -1354,6 +910,12 @@
     </ClInclude>
     <ClInclude Include="vsixtest\pch.h">
       <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\vm_enclave\vdbe.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="vm_enclave_u.h">
+      <Filter>Generated Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -1371,6 +933,9 @@
     </None>
     <None Include="Makefile.msc">
       <Filter>Makefiles</Filter>
+    </None>
+    <None Include="..\vm_enclave\vm_enclave.edl">
+      <Filter>Source Files</Filter>
     </None>
   </ItemGroup>
 </Project>
