@@ -27,6 +27,14 @@
 
 
 
+typedef struct ms_ocall_sqlite3_exec_with_sqlite3InitCallback_t {
+	int ms_retval;
+	void* ms_database;
+	char* ms_sql;
+	void* ms_argument;
+	size_t ms_arg_size;
+} ms_ocall_sqlite3_exec_with_sqlite3InitCallback_t;
+
 #ifdef _MSC_VER
 #pragma warning(push)
 #pragma warning(disable: 4127)
@@ -36,13 +44,6 @@
 static sgx_status_t SGX_CDECL sgx_dummy_public_root_ecall(void* pms)
 {
 	sgx_status_t status = SGX_SUCCESS;
-
-#ifdef _MSC_VER
-	/* In case enclave `vm_enclave' doesn't call any tRTS function. */
-	volatile int force_link_trts = sgx_is_within_enclave(NULL, 0);
-	(void) force_link_trts; /* avoid compiler warning */
-#endif
-
 	if (pms != NULL) return SGX_ERROR_INVALID_PARAMETER;
 	dummy_public_root_ecall();
 	return status;
@@ -60,10 +61,53 @@ SGX_EXTERNC const struct {
 
 SGX_EXTERNC const struct {
 	size_t nr_ocall;
+	uint8_t entry_table[1][1];
 } g_dyn_entry_table = {
-	0,
+	1,
+	{
+		{0, },
+	}
 };
 
+
+sgx_status_t SGX_CDECL ocall_sqlite3_exec_with_sqlite3InitCallback(int* retval, void* database, const char* sql, void* argument, size_t arg_size)
+{
+	sgx_status_t status = SGX_SUCCESS;
+	size_t _len_sql = sizeof(*sql);
+	size_t _len_argument = arg_size;
+
+	ms_ocall_sqlite3_exec_with_sqlite3InitCallback_t* ms;
+	OCALLOC(ms, ms_ocall_sqlite3_exec_with_sqlite3InitCallback_t*, sizeof(*ms));
+
+	ms->ms_database = SGX_CAST(void*, database);
+	if (sql != NULL && sgx_is_within_enclave(sql, _len_sql)) {
+		OCALLOC(ms->ms_sql, char*, _len_sql);
+		memcpy((void*)ms->ms_sql, sql, _len_sql);
+	} else if (sql == NULL) {
+		ms->ms_sql = NULL;
+	} else {
+		sgx_ocfree();
+		return SGX_ERROR_INVALID_PARAMETER;
+	}
+	
+	if (argument != NULL && sgx_is_within_enclave(argument, _len_argument)) {
+		OCALLOC(ms->ms_argument, void*, _len_argument);
+		memcpy(ms->ms_argument, argument, _len_argument);
+	} else if (argument == NULL) {
+		ms->ms_argument = NULL;
+	} else {
+		sgx_ocfree();
+		return SGX_ERROR_INVALID_PARAMETER;
+	}
+	
+	ms->ms_arg_size = arg_size;
+	status = sgx_ocall(0, ms);
+
+	if (retval) *retval = ms->ms_retval;
+
+	sgx_ocfree();
+	return status;
+}
 
 #ifdef _MSC_VER
 #pragma warning(pop)

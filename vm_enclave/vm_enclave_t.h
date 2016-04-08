@@ -16,6 +16,7 @@ extern "C" {
 
 void dummy_public_root_ecall();
 
+sgx_status_t SGX_CDECL ocall_sqlite3_exec_with_sqlite3InitCallback(int* retval, void* database, const char* sql, void* argument, size_t arg_size);
 
 #ifdef __cplusplus
 }

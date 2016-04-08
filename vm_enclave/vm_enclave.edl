@@ -1,11 +1,19 @@
 enclave {
     trusted {
-        /* define ECALLs here. */
 		public void dummy_public_root_ecall();
     };
 
     untrusted {
-        /* define OCALLs here. */
-    
+		/* Only OP_ParseSchema uses this wrapper of `sqlite3_exec` to create a new VM.
+		 * The OCALL implementation has to add the following parameters when calling the external `sqlite3_exec` function:
+		 * - `sqlite3InitCallback` as the `callback` function pointer (the pointer to the external function should not be handled inside the enclave)
+		 * - 0 (null pointer) for the `errmsg`
+		 */
+		int ocall_sqlite3_exec_with_sqlite3InitCallback(
+			[user_check]		void*		database,	// An open database, has to be cast back to (sqlite3*) afterwards
+			[in]				const char*	sql,		// SQL to be evaluated
+			[in, size=arg_size]	void*		argument,	// 1st argument to callback
+								size_t		arg_size	// size of argument parameter
+		);
     };
 };

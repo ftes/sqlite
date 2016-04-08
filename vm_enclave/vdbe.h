@@ -18,8 +18,11 @@
 #ifndef _SQLITE_VDBE_H_
 #define _SQLITE_VDBE_H_
 #include <stdio.h>
-#include <stdint.h>
 
+// Fredrik
+// these two includes were not originally necessary, but visual studio complained about missing them
+// they make u8 types etc. available
+#include <stdint.h>
 #include "sqliteInt.h"
 
 /*

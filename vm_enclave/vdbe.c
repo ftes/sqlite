@@ -20,6 +20,7 @@
 */
 #include "sqliteInt.h"
 #include "vdbeInt.h"
+#include "vm_enclave_t.h"
 
 /*
 ** Invoke this macro on memory cells just prior to changing the
@@ -5392,6 +5393,7 @@ case OP_ParseSchema: {
   const char *zMaster;
   char *zSql;
   InitData initData;
+  int rc;
 
   /* Any prepared statement that invokes this opcode will hold mutexes
   ** on every btree.  This is a prerequisite for invoking 
@@ -5421,7 +5423,11 @@ case OP_ParseSchema: {
       db->init.busy = 1;
       initData.rc = SQLITE_OK;
       assert( !db->mallocFailed );
-      rc = sqlite3_exec(db, zSql, sqlite3InitCallback, &initData, 0);
+
+	  // FREDRIK
+	  // problematic, because this creates a new VM - needs a new enclave!
+      ocall_sqlite3_exec_with_sqlite3InitCallback(&rc, db, zSql, &initData, sizeof(initData));
+
       if( rc==SQLITE_OK ) rc = initData.rc;
       sqlite3DbFree(db, zSql);
       db->init.busy = 0;
