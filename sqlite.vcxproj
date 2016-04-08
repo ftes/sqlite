@@ -36,15 +36,17 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <NMakeBuildCommandLine>nmake /f Makefile.msc</NMakeBuildCommandLine>
+    <NMakeBuildCommandLine>nmake /f Makefile.msc DEBUG=1</NMakeBuildCommandLine>
     <NMakeCleanCommandLine>nmake /f Makefile.msc clean</NMakeCleanCommandLine>
-    <NMakeReBuildCommandLine>nmake /f Makefile.msc</NMakeReBuildCommandLine>
+    <NMakeReBuildCommandLine>
+    </NMakeReBuildCommandLine>
     <NMakePreprocessorDefinitions>WIN32;_DEBUG;$(NMakePreprocessorDefinitions)</NMakePreprocessorDefinitions>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <NMakeBuildCommandLine>make /f Makefile.msc sqlite3.c</NMakeBuildCommandLine>
-    <NMakeCleanCommandLine>make /f Makefile.msc clean</NMakeCleanCommandLine>
-    <NMakeReBuildCommandLine>make /f Makefile.msc sqlite3.c</NMakeReBuildCommandLine>
+    <NMakeBuildCommandLine>nmake /f Makefile.msc sqlite3.c</NMakeBuildCommandLine>
+    <NMakeCleanCommandLine>nmake /f Makefile.msc clean</NMakeCleanCommandLine>
+    <NMakeReBuildCommandLine>
+    </NMakeReBuildCommandLine>
     <NMakePreprocessorDefinitions>WIN32;NDEBUG;$(NMakePreprocessorDefinitions)</NMakePreprocessorDefinitions>
   </PropertyGroup>
   <ItemDefinitionGroup>
