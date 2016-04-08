@@ -1,7 +1,7 @@
 enclave {
     trusted {
         /* define ECALLs here. */
-    
+		public void dummy_public_root_ecall();
     };
 
     untrusted {

@@ -65,6 +65,7 @@
     <NMakeReBuildCommandLine>
     </NMakeReBuildCommandLine>
     <NMakePreprocessorDefinitions>WIN32;_DEBUG;$(NMakePreprocessorDefinitions)</NMakePreprocessorDefinitions>
+    <IncludePath>.\;..\vm_enclave;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Simulation|Win32'">
     <NMakeBuildCommandLine>nmake /f Makefile.msc DEBUG=1</NMakeBuildCommandLine>
