@@ -72,7 +72,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <GenerateManifest>false</GenerateManifest>
     <LinkIncremental>false</LinkIncremental>
-    <IncludePath>$(NoInherit)</IncludePath>
+    <IncludePath>$(VCInstallDir)include;$(IncludePath)</IncludePath>
     <LibraryPath>$(NoInherit)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Simulation|Win32'">
